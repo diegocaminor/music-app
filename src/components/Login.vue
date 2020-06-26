@@ -22,6 +22,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import "@/assets/scss/main.scss";
 
 .wrap {
@@ -32,7 +33,9 @@ export default {
 }
 
 h1.title {
-  font-weight: bold;
+  color: #00bfd6;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 #login img {
@@ -44,6 +47,7 @@ h1.title {
   margin: 20px 0 10px;
   color: #ff9300;
   font-weight: 600;
+  font-family: "Roboto", sans-serif;
   font-size: 0.8em;
 }
 
@@ -60,20 +64,6 @@ h1.title {
   width: 25%;
   height: 50%;
   margin-top: 20px;
+  background: #00bfd6;
 }
-
-// h3 {
-//   margin: 40px 0 0;
-// }
-// ul {
-//   list-style-type: none;
-//   padding: 0;
-// }
-// li {
-//   display: inline-block;
-//   margin: 0 10px;
-// }
-// a {
-//   color: #42b983;
-// }
 </style>
