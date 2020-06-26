@@ -1,17 +1,21 @@
 <template lang="pug">
   #app
-    img(alt="Vue logo" src="./assets/logo.png")
-    hello-world
+    login
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Login from "./components/Login.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Login
   },
+  data() {
+    return {
+      msg: "Registro de estación Platzi"
+    };
+  }
 };
 </script>
 

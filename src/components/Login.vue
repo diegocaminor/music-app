@@ -1,0 +1,56 @@
+<template lang="pug">
+  #login.wrap
+    img(alt="Vue logo" src="@/assets/images/satellite-platzi.png")
+    h1.title Registro estación de Platzi
+    label Nombre
+    input.input(type='text')
+    label Apellido
+    input.input(type='text')
+    label Cargo
+    input.input(type='text')
+    button.button.is-primary Enviar
+</template>
+
+<script>
+export default {
+  name: "HelloWorld",
+  props: {
+    msg: String
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss" scoped>
+@import "@/assets/scss/main.scss";
+
+.wrap {
+  width: 320px;
+  height: 409px;
+  display: grid;
+  margin: auto;
+}
+
+h1.title {
+  font-weight: bold;
+}
+
+label {
+  text-align: left;
+  margin: 20px 0 10px;
+}
+// h3 {
+//   margin: 40px 0 0;
+// }
+// ul {
+//   list-style-type: none;
+//   padding: 0;
+// }
+// li {
+//   display: inline-block;
+//   margin: 0 10px;
+// }
+// a {
+//   color: #42b983;
+// }
+</style>
