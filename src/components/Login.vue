@@ -35,10 +35,33 @@ h1.title {
   font-weight: bold;
 }
 
-label {
+#login img {
+  margin: 0 auto 20px;
+}
+
+#login label {
   text-align: left;
   margin: 20px 0 10px;
+  color: #ff9300;
+  font-weight: 600;
+  font-size: 0.8em;
 }
+
+#login input {
+  width: auto;
+  height: 50%;
+  border: 0;
+  border-bottom: 1px solid #ff9300;
+  border-radius: 0;
+}
+
+#login button {
+  margin-left: auto;
+  width: 25%;
+  height: 50%;
+  margin-top: 20px;
+}
+
 // h3 {
 //   margin: 40px 0 0;
 // }
