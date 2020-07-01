@@ -12,25 +12,29 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
+  // data() {
+  //   return {
+  //     track: {},
+  //   };
+  // },
 
-  data () {
-    return {
-      track: {}
-    }
+  // created() {
+  //   this.$bus.$on("set-track", (track) => {
+  //     this.track = track;
+  //   });
+  // },
+  computed: {
+    ...mapState(["track"]),
   },
-
-  created () {
-    this.$bus.$on('set-track', (track) => {
-      this.track = track
-    })
-  }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-  img {
-    width: 124px;
-    border-radius: 50%;
-  }
+img {
+  width: 124px;
+  border-radius: 50%;
+}
 </style>
