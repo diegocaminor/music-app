@@ -1,38 +1,23 @@
 <template lang="pug">
   #app
-    //- px-login
-    px-header
+    pm-header
+
+    router-view
+
+    pm-footer
 </template>
 
 <script>
-import PxLogin from "./components/PxLogin.vue";
-import PxHeader from "./components/PxHeader.vue";
+import PmFooter from "@/components/layout/Footer.vue";
+import PmHeader from "@/components/layout/Header.vue";
 
 export default {
-  name: "App",
-  components: {
-    PxLogin,
-    PxHeader
-  },
-  data() {
-    return {
-      msg: "Registro de estación Platzi"
-    };
-  }
+  name: "app",
+
+  components: { PmFooter, PmHeader },
 };
 </script>
 
-<style>
-body {
-  margin: 0;
-  padding: 0;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="scss">
+@import "./scss/main.scss";
 </style>
