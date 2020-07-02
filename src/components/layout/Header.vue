@@ -1,15 +1,23 @@
 <template lang="pug">
   section.hero.is-success
     .hero-head
-      header.nav
+      header.navbar
         .container
-          .nav-left
-            .nav-item
+          .navbar-brand
+            a.navbar-item
               strong 📻  Music App
-            .nav-right.nav-menu
-              router-link.nav-item(:to="{ name: 'search' }") Buscar
-              router-link.nav-item(to="about") Nosotros
-
+            span.navbar-burger.burger(data-target='navbarMenuHeroA')
+              span
+              span
+              span
+          #navbarMenuHeroA.navbar-menu
+            .navbar-end
+              a.navbar-item(@click="selectLanguage('en')") 🇺🇸
+              a.navbar-item(@click="selectLanguage('es')") 🇪🇸
+              a.navbar-item.is-active
+                router-link.nav-item(to="search") {{ $t('search') }}
+              a.navbar-item
+                router-link.nav-item(to="about") {{ $t('about') }}
     .hero-body
       .container.has-text-centered
         h1.title Music App
@@ -22,5 +30,10 @@ import PmPlayer from "@/components/Player.vue";
 
 export default {
   components: { PmPlayer },
+  methods: {
+    selectLanguage(lang) {
+      this.$i18n.locale = lang;
+    },
+  },
 };
 </script>
